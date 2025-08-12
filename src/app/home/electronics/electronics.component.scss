@@ -1,0 +1,235 @@
+.category-btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.btn-outline-secondary {
+  border: 1.5px solid #0071e3;
+  color: #0071e3;
+  background: transparent;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+  &:hover {
+    background: #0071e3;
+    color: #fff;
+  }
+}
+// Apple Categories Banner Styles
+// Apple Categories Banner Styles
+.apple-categories-banner {
+  //   padding: 2rem 0;
+  background: #f8f9fa;
+  .apple-categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap removed, use Bootstrap g-3 for spacing */
+  }
+  .category-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    min-height: 480px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    transition: box-shadow 0.2s;
+    position: relative;
+    &:hover {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      z-index: 2;
+    }
+    &.dark-bg {
+      background-color: #111;
+      color: #fff;
+      .btn-primary {
+        background: #fff;
+        color: #0071e3;
+        border: none;
+      }
+    }
+    &.light-bg {
+      background-color: #fff;
+      color: #111;
+    }
+    .category-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2.2rem 2rem 2.2rem 2rem;
+      background: none;
+      box-sizing: border-box;
+    }
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.7rem;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #111;
+      margin-bottom: 1.7rem;
+      min-height: unset;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+    }
+    .category-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .btn-primary {
+      background: #0071e3;
+      border: none;
+      border-radius: 22px;
+      padding: 0.45rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.2s;
+      &:hover {
+        background: #005bb5;
+      }
+    }
+    .btn-outline-secondary {
+      border: 2px solid #0071e3;
+      color: #0071e3;
+      background: transparent;
+      border-radius: 22px;
+      padding: 0.45rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      &:hover {
+        background: #0071e3;
+        color: #fff;
+        border-color: #0071e3;
+      }
+    }
+  }
+
+  // Set background images for each card by order
+  .category-card:nth-of-type(1) {
+    background-image: url("/assets/images/product/electronics/iphone-hero/iphone_largetall.jpg");
+    width: 3008px;
+    height: 580px;
+    background-size: 3008px 692px;
+  }
+  .category-card:nth-of-type(2) {
+    background-image: url("/assets/images/product/electronics/macbook-air-hero/macbook_air_largetall.jpg");
+    width: 3008px;
+    height: 580px;
+    background-size: 3008px 692px;
+  }
+  .category-card:nth-of-type(3) {
+    background-image: url("/assets/images/product/electronics/ipad-air-hero/ipad_air_large_2x.jpg");
+    height: 580px;
+    background-size: 1262px 580px;
+  }
+  .category-card:nth-of-type(4) {
+    background-image: url("/assets/images/product/electronics/apple-watch-hero/apple_watch_large_2x.jpg");
+    height: 580px;
+    background-size: 1262px 580px;
+  }
+  .category-card:nth-of-type(5) {
+    background-image: url("/assets/images/product/electronics/airpods-hero/airpods_large_2x.jpg");
+    height: 580px;
+    background-size: 1262px 580px;
+  }
+  .category-card:nth-of-type(5) .category-content {
+    justify-content: flex-end;
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+  .category-card:nth-of-type(6) {
+    background-image: url("/assets/images/product/electronics/trade-in-hero/tradein_large_2x.jpg");
+    height: 580px;
+    background-size: 1262px 580px;
+  }
+
+  @media (max-width: 768px) {
+    .category-card {
+      min-height: 400px;
+      .category-content {
+        padding: 1rem 0.2rem;
+      }
+    }
+    .category-card:nth-of-type(1) {
+      background-image: url("/assets/images/product/electronics/iphone-hero/iphone_mediumtall.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+    .category-card:nth-of-type(2) {
+      background-image: url("/assets/images/product/electronics/macbook-air-hero/macbook_air_mediumtall.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+    .category-card:nth-of-type(3) {
+      background-image: url("/assets/images/product/electronics/ipad-air-hero/ipad_air_medium_2x.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+    .category-card:nth-of-type(4) {
+      background-image: url("/assets/images/product/electronics/apple-watch-hero/apple_watch_medium_2x.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+    .category-card:nth-of-type(5) {
+      background-image: url("/assets/images/product/electronics/airpods-hero/airpods_medium_2x.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+    .category-card:nth-of-type(6) {
+      background-image: url("/assets/images/product/electronics/trade-in-hero/tradein_medium_2x.jpg");
+      height: 500px;
+      background-size: 734px 500px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .category-card {
+      min-height: 285px;
+      .category-content {
+        padding: 0.7rem 0.1rem;
+      }
+      h3,
+      p {
+        font-size: 0.95rem;
+      }
+    }
+    .category-card:nth-of-type(1) {
+      background-image: url("/assets/images/product/electronics/iphone-hero/iphone_small.jpg");
+    }
+    .category-card:nth-of-type(2) {
+      background-image: url("/assets/images/product/electronics/macbook-air-hero/macbook_air_small.jpg");
+    }
+    .category-card:nth-of-type(3) {
+      background-image: url("/assets/images/product/electronics/ipad-air-hero/ipad_air_small_2x.jpg");
+    }
+    .category-card:nth-of-type(4) {
+      background-image: url("/assets/images/product/electronics/apple-watch-hero/apple_watch_small_2x.jpg");
+    }
+    .category-card:nth-of-type(5) {
+      background-image: url("/assets/images/product/electronics/airpods-hero/airpods_small_2x.jpg");
+    }
+    .category-card:nth-of-type(6) {
+      background-image: url("/assets/images/product/electronics/trade-in-hero/tradein_small_2x.jpg");
+    }
+  }
+}
